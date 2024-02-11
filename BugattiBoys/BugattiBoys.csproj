@@ -7,8 +7,8 @@
     <ProjectGuid>{DEAF4438-8089-40ED-8175-398E1261D45B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JotunnModStub</RootNamespace>
-    <AssemblyName>JotunnModStub</AssemblyName>
+    <RootNamespace>BugattiBoys</RootNamespace>
+    <AssemblyName>BugattiBoys</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -49,6 +49,9 @@
     <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\HarmonyX.2.9.0\lib\net45\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>..\..\..\Valheim\BepInEx\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
     <Reference Include="Jotunn, Version=2.15.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\JotunnLib.2.15.0\lib\net462\Jotunn.dll</HintPath>
     </Reference>
@@ -83,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
-    <Compile Include="JotunnModStub.cs" />
+    <Compile Include="BugattiBoys.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
