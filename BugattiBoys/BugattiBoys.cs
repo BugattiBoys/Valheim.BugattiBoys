@@ -10,7 +10,7 @@ namespace BugattiBoys
     //[NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.Minor)]
     internal class BugattiBoys : BaseUnityPlugin
     {
-        public const string PluginGUID = "com.jotunn.jotunnmodstub";
+        public const string PluginGUID = "BugattiBoys.Valheim.BugattiBoys";
         public const string PluginName = "BugattiBoys";
         public const string PluginVersion = "0.0.1";
         
@@ -23,6 +23,7 @@ namespace BugattiBoys
             // Jotunn comes with its own Logger class to provide a consistent Log style for all mods using it
             Jotunn.Logger.LogInfo("ModStub has landed");
             
+
             // To learn more about Jotunn's features, go to
             // https://valheim-modding.github.io/Jotunn/tutorials/overview.html
         }
