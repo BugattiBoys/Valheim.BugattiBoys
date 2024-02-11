@@ -85,9 +85,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Envronment.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Patcher.cs" />
+    <Compile Include="Patches\Game.cs" />
+    <Compile Include="Plugins\AddPortalPins\AddPortalPinsPlugin.cs" />
+    <Compile Include="Plugins\AddPortalPins\RPC\Client.cs" />
+    <Compile Include="Plugins\AddPortalPins\RPC\Manager.cs" />
+    <Compile Include="Plugins\AddPortalPins\RPC\Server.cs" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="BugattiBoys.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stores\Portals\Portal.cs" />
+    <Compile Include="Stores\Portals\PortalManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BugattiBoys.Plugins.AddPortalPins.RPC
 {
+
     internal static class Manager
     {
         // Server RPCs
@@ -20,13 +21,13 @@ namespace BugattiBoys.Plugins.AddPortalPins.RPC
         public static void Register()
         {
             // Server RPCs
-            ZRoutedRpc.instance.Register(RPC_SYNCPORTAL, new Action<long, ZPackage>(Client.ClientEvents.RPC_SyncPortal));
-            ZRoutedRpc.instance.Register(RPC_RESYNC, new Action<long, ZPackage, string>(Client.ClientEvents.RPC_Resync));
+            //ZRoutedRpc.instance.Register(RPC_SYNCPORTAL, new Action<long, ZPackage>(Client.ClientEvents.RPC_SyncPortal));
+            ZRoutedRpc.instance.Register(RPC_RESYNC, new Action<long, ZPackage>(Client.ReceiveResync));
 
             // Client RPCs
-            ZRoutedRpc.instance.Register(RPC_SYNCREQUEST, new Action<long, string>(Server.ServerEvents.RPC_SyncRequest));
-            ZRoutedRpc.instance.Register(RPC_ADDORUPDATEREQUEST, new Action<long, ZPackage>(Server.ServerEvents.RPC_AddOrUpdateRequest));
-            ZRoutedRpc.instance.Register(RPC_REMOVEREQUEST, new Action<long, ZDOID>(Server.ServerEvents.RPC_RemoveRequest));
+            ZRoutedRpc.instance.Register(RPC_SYNCREQUEST, new Action<long, string>(Server.SyncRequest));
+            //ZRoutedRpc.instance.Register(RPC_ADDORUPDATEREQUEST, new Action<long, ZPackage>(Server.ServerEvents.RPC_AddOrUpdateRequest));
+            //ZRoutedRpc.instance.Register(RPC_REMOVEREQUEST, new Action<long, ZDOID>(Server.ServerEvents.RPC_RemoveRequest));
         }
     }
 }

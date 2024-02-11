@@ -14,7 +14,6 @@ namespace BugattiBoys
         public static void Patch()
         {
             patcher.PatchAll(typeof(Game_Start));
-            patcher.PatchAll(typeof(ZDOMan_ConnectPortals));
         }
 
         public static void Unpatch() => patcher?.UnpatchSelf();

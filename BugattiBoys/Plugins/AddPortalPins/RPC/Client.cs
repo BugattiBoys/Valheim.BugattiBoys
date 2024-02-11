@@ -8,9 +8,16 @@ namespace BugattiBoys.Plugins.AddPortalPins.RPC
 {
     internal static class Client
     {
-        public static long SendSyncRequest()
+        public static void RequestSync(string reason)
         {
-            
+            Log.Info($"Asking server for a sync request, because: {reason}");
+            ZRoutedRpc.instance.InvokeRoutedRPC(Environment.ServerPeerId, Manager.RPC_SYNCREQUEST, reason);
+        }
+
+        public static void ReceiveResync(long sender, ZPackage pkg)
+        {
+            Log.Info("Client has received resync request");
+            AddPortalPinsPlugin.UpdateFromPackage(pkg);
         }
     }
 }

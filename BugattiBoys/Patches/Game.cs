@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BugattiBoys.Plugins.AddPortalPins;
 using BugattiBoys.Stores.Portals;
 using HarmonyLib;
 
@@ -14,6 +15,8 @@ namespace BugattiBoys.Patches
         static void Postfix()
         {
             Environment.GameStarted = true;
+            BugattiBoys.GameStarted();
+            AddPortalPinsPlugin.GameStarted();
         }
     }
 }
